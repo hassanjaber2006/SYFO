@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Oswald:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Acme', sans-serif;
+    word-spacing: 2px;
+}
+a{
+    cursor: pointer;
+}
+:root{
+    --f-color:#083EFD;
+    --s-color:#FFFFFB;
+    --t-color:#E12836;
+}
+
+header{
+    width: 100%;
+    background-color: var(--f-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0px;
+    height: auto;
+    transition: 1s all;
+    z-index: 50;
+    position: fixed;
+}
+footer{
+    text-align: center;
+    background-color: #083EFD;
+    padding: 5px 0;
+    font-size: 1rem;
+    width: 100%;
+    z-index: 999;
+}
+main{
+    min-height: 95vh;
+    padding-top: 30px;
+}
+.navigation-item{
+    color: #FFFFFB;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 8px;
+}
+.navigation-item:hover{
+    color: black;
+}
+.active{
+    font-weight: 600;
+    border-bottom: solid 2px black;
+    padding-bottom: 4px;
+}
+.navigation-item span{
+    display: none;
+}
+.dropdown{
+    display: inline;
+}
+#nav2{
+    display: none;
+}
+#navBtn{
+    display: none;
+}
+
+.form-content,.form-register-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-content button ,.form-register-content button{
+    border: none;
+    width: 100%;
+    color: #000;
+    font-size: large;
+    padding: 4px;
+    font-weight: 500;
+    margin-top: 15px;
+    display: block;
+}
+.form-content form ,.form-register-content form{
+    box-shadow: 0 0 10px gray;
+    padding: 15px;
+    margin-top: 5%;
+    width: 55%;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+}
+.register-box{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0px;
+    width: 100%;
+}
+.register-box input{
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+    border-radius: 4px;
+    border: 2px solid gray;
+}
+.input-register-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-box input,textarea{
+    width: 100%;
+    height: 35px;
+    padding-left: 5px;
+    border-radius: 4px;
+    border: 2px solid gray;
+}
+.input-box input:focus,.input-box textarea:focus,.register-box input:focus{
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    outline: none;
+    padding: 4px 0 4px 8px;
+}
+.fileLable{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    background: gray;
+    border-radius: 4px;
+    text-align: center;
+    font-size: large;
+    color: #fffffb;
+    font-weight: 600;
+    padding: 4px 0;
+    cursor: pointer;
+}
+#fileName{
+    text-align: center;
+    max-width: 100%;
+}
+.accordion-item{
+    width: 60%;
+    margin-left: 20%;
+}
+.rm{
+    margin-right: 1px;
+}
+.lm{
+    margin-left: 1px;
+}
+#check{
+    width: auto;
+    height: auto;
+    margin-right: 2px;
+}
+.check_input_box{
+    flex-direction: row;
+}
+.carousel-item img{
+    width: 850px;
+    height: 400px;
+}
+
+.carousel-container{
+    width: 75%;
+    margin-left: 12.5%;
+}
+#removeFile{
+    background: #fffffb;
+    border: 2px solid #E12836 !important;
+    border-radius: 3px;
+    transition:linear 0.3s;
+    display: none;
+}
+#removeFile:hover{
+    background:#E12836
+}
+.body-section{
+    padding: 2%;
+}
+.top-page{
+    margin: 25px 0 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: center;
+}
+.settings{
+    display: flex;
+    flex-direction: row;
+    width: 185px;
+    justify-content: space-around;
+    align-items: center;
+}
+.settings i {
+    color: black;
+    font-size: 24px;
+}
+.settings button{
+    border: 2px solid #E12836 !important;
+    border-radius: 3px;
+    transition:linear 0.3s;
+    background:#fff;
+    color: #E12836;
+    padding: 4px;
+}
+.settings button:hover{
+    background:#E12836;
+    color: #fff;
+}
+.search-box{
+    width: 35%;
+}
+.search-box input{
+    width: 95%;
+    padding:0 4px;
+    border: none;
+    border-bottom: 2px solid;
+    font-size: 20px;
+}
+.search-box input:focus{
+    outline: none;
+}
+.search-box button{
+    width: 5%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+}
+.top-page-hr{
+    width: 98%;
+    margin: 0 1%;
+    color: black;
+    height: 2px !important;
+    opacity: 1;
+}
+.contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem; 
+}
+.contact-box div{
+    box-shadow: 0 0 10px gray;
+    padding: 15px 20px;
+    text-align: center;
+    margin-top: 3%;
+}
+.feedback{
+    margin-top: 30px;
+    width: 73%;
+}
+.feedback textarea{
+    height: 120px;
+    font-size: 20px;
+}
+.feedback textarea:focus{
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+@media only screen and (max-width: 650px) {
+    #navBtn{
+        display: inline;
+    }
+    .carousel-item img{
+        width: 100%;
+        height: 350px;
+    }
+    .carousel-container{
+        width: 100%;
+        padding-left: 45px;
+        margin-left: 0;
+    }
+    .search-box{
+        width: 80%;
+        margin-top: 15px;
+    }
+    .settings{
+        width:100%
+    }
+    .top-page{
+        margin: 25px 0 10px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        align-items: center;
+        padding-left: 45px;
+    }
+    .top-page-hr{
+        width: calc(99% - 50px);
+        margin: 0 1% 0 50px;
+        color: black;
+        height: 2px !important;
+        opacity: 1;
+    }
+    .body-section{
+        padding-left: 50px;
+    }
+    .contact-box{
+        padding-left: 45px;
+        font-size: 1rem;
+    }
+    header{
+        width: 50%;
+        background-color: var(--f-color);
+        display: flex;
+        justify-content: start;
+        align-items:unset;
+        padding: 10px 0px;
+        padding-left: 2px;
+        height: 100% !important;
+        position: fixed;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .navigation-item{
+        font-size: 1.3rem;
+        margin: 8px 0;
+        padding-left:8%;
+    }
+    .navigation-item:hover,.active{
+        background: #fffffb;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        color: black;
+        font-size: 1.2rem;
+        width: 100%;
+        padding: 5px 8%;
+    }
+    .dropdown-toggle{
+        display: block;
+    }
+    nav i{
+        font-size: 20px;
+        width: 20%;
+        color: #000;
+    }
+    .navigation-item span{
+        display: inline;
+    }
+    .input-box input,textarea{
+        width: 100%;
+        height: 35px;
+        padding-left: 5px;
+        border-radius: 4px;
+        border: 2px solid gray;
+    }
+    #fileName{
+        text-align: center;
+        max-width: 100%;
+    }
+    .input-box input:focus,textarea:focus{
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+        outline: none;
+        padding: 4px 0 4px 8px;
+    }
+    .fileLable{
+        display: inline-block;
+        width: 100%;
+        height: 35px;
+        background: gray;
+        border-radius: 4px;
+        text-align: center;
+        font-size: large;
+        color: #fffffb;
+        font-weight: 600;
+        padding: 4px 0;
+        cursor: pointer;
+    }
+    .form-content button,.form-register-content button{
+        border: none;
+        width: 100%;
+        color: #000;
+        font-size: large;
+        padding: 4px;
+        font-weight: 500;
+        margin-top: 15px;
+    }
+    .form-content ,.accordion{
+        padding-left: 45px;
+    }
+    .accordion-item{
+        width: 100%;
+        margin-left: 0;
+    }
+    .form-content form ,.form-register-content form{
+        width: 80%;
+    }
+    .rm{
+        margin-right: 0;
+    }
+    .lm{
+        margin-left: 0;
+    }
+    .input-register-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
